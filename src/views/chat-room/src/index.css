@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,
+body {
+  height: 100%;
+}
+nav {
+  background-color: crimson;
+  padding: 1rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+nav h1 {
+  font-weight: 200;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+nav li {
+  margin: 0 1rem;
+}
+form label {
+  display: block;
+}
+form {
+  display: flex;
+  display: inline-block;
+  justify-content: center;
+  flex-direction: column;
+}
+form button {
+  position: relative;
+  background-color: crimson;
+  color: #fff;
+  border: 3px solid crimson;
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 0.25rem 0;
+  cursor: pointer;
+}
+form input {
+  padding: 0.25rem;
+  font-size: 1.25rem;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 3px;
+}
+input,
+button {
+  margin: 0.25rem 0;
+}
+.join-wrapper {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.join-wrapper h1 {
+  margin: 1rem 0;
+}
+.join-wrapper p {
+  margin: 1rem 0;
+  color: rgb(136, 136, 136);
+  padding: 1rem 3rem;
+}
+.join-wrapper div {
+  margin: 1rem 0;
+}
+.join-wrapper input {
+  padding: 0.5rem 1rem;
+}
+.join-wrapper button {
+  padding: 0.5rem;
+}
+.chat-wrapper {
+  height: 92vh;
+  width: 100vw;
+  display: flex;
+}
+.chat-sidebar {
+  height: 100%;
+  width: 20vw;
+  background-color: #eee;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+.chat-footer {
+  position: absolute;
+  bottom: 0;
+  left: 20vw;
+  width: 100%;
+  background-color: crimson;
+  height: 6vh;
+}
+.chat-footer form,
+input {
+  border: none;
+  font-size: 1.25rem;
+  color: crimson;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+label {
+  color: rgb(139, 139, 139);
+  font-size: 0.75rem;
+}
+.chat-footer input {
+  border: none;
+  border-top: 2px solid rgb(219, 219, 219);
+}
+.chat-sidebar--title {
+  background-color: rgb(14, 14, 14);
+  padding: 1rem;
+  color: #fff;
+}
+.chat-sidebar--info {
+  background-color: #333;
+  padding: 1rem;
+  color: #fff;
+}
+.chat-sidebar--users {
+  background-color: #fff;
+  padding: 1rem;
+  color: crimson;
+}
+.chat-sidebar--users ul {
+  list-style-type: none;
+  overflow-y: scroll;
+  height: 70vh;
+}
+.chat-sidebar--users li {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.chat-messages {
+  position: relative;
+  width: 80vw;
+  overflow-y: scroll;
+  padding-bottom: 2.5rem;
+}
+.chat-msg__sender {
+  display: block;
+  text-align: right;
+  padding: 0.5rem 1rem;
+}
+.chat-msg__sender h4 {
+  padding: 1rem;
+  border-radius: 17px;
+  display: inline-block;
+  background-color: crimson;
+  color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.chat-msg__sender p {
+  margin: 0.25rem 0;
+  font-size: 0.75rem;
+}
+.chat-msg__receiver {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+.chat-msg__receiver h4 {
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 17px;
+  background-color: #333;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.chat-msg__receiver p {
+  color: #333;
+  margin: 0.25rem 0;
+  font-size: 0.75rem;
+}
+.page-not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(41, 41, 41);
+  min-height: 80vh;
+}
+@media screen and (max-width: 600px) {
+  .chat-sidebar {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .chat-footer {
+    left: 0vw;
+  }
+  .chat-messages {
+    width: 100vw;
+  }
+  .chat-wrapper {
+    flex-direction: column;
+  }
+  .chat-sidebar--users {
+    display: none;
+  }
+  .chat-sidebar--title, .chat-sidebar--info {
+    background-color: rgba(255, 255, 255, 0);
+    color: #333;
+  }
+}
