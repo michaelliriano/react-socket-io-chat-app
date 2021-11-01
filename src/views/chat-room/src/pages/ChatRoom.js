@@ -14,6 +14,9 @@ export default function ChatRoom({ socket, match }) {
   const [roomName, setRoomName] = useState("");
   const senderId = socket.id;
   const messageBox = useRef(null);
+  const handleClickUser = (user) => {
+    console.log(user);
+  };
   const onSubmit = (e) => {
     e.preventDefault();
     const time = moment().format("LT");
@@ -48,7 +51,12 @@ export default function ChatRoom({ socket, match }) {
 
   return (
     <div className="chat-wrapper">
-      <Sidebar users={users} userLength={users.length} roomName={roomName} />
+      <Sidebar
+        users={users}
+        userLength={users.length}
+        roomName={roomName}
+        handleClick={handleClickUser}
+      />
       <Messages
         messages={messages}
         refElement={messageBox}

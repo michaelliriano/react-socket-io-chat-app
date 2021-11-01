@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Messages({ messages, refElement, senderId }) {
+export default function Messages({ messages, refElement, senderId, handleClick }) {
   return (
     <div ref={refElement} className="chat-messages">
       {messages.map(({ id, msg, name, msgId, time }) => (
@@ -11,7 +11,7 @@ export default function Messages({ messages, refElement, senderId }) {
           }
         >
           <h4>{msg}</h4>
-          <p>{name + ' ' + time}</p>
+          <p>{name + " " + time}</p>
         </div>
       ))}
     </div>

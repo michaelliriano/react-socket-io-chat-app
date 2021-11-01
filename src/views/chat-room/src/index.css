@@ -58,7 +58,7 @@ form button {
   cursor: pointer;
 }
 form input {
-  padding: 0.25rem;
+  padding: 0.25 0rem;
   font-size: 1.25rem;
   border: 1px solid rgb(197, 197, 197);
   border-radius: 3px;
@@ -86,7 +86,7 @@ button {
   margin: 1rem 0;
 }
 .join-wrapper input {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem .25rem;
 }
 .join-wrapper button {
   padding: 0.5rem;
