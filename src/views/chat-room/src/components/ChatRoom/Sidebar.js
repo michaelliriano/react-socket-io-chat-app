@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Sidebar({ userLength, users, roomName }) {
+export default function Sidebar({ userLength, users, roomName, handleClick }) {
   return (
     <div className="chat-sidebar">
       <div className="chat-sidebar--title">
@@ -11,7 +11,14 @@ export default function Sidebar({ userLength, users, roomName }) {
       </div>
       <div className="chat-sidebar--users">
         <h3>USERS ONLINE</h3>
-        <ul>{!!users && users.map((user) => <li key={user.id}>@{user.name}</li>)}</ul>
+        <ul>
+          {!!users &&
+            users.map((user) => (
+              <li key={user.id} onClick={() => handleClick(user)}>
+                @{user.name}
+              </li>
+            ))}
+        </ul>
       </div>
     </div>
   );
