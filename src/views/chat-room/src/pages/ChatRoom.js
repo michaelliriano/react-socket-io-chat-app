@@ -74,7 +74,7 @@ export default function ChatRoom({ socket, match }) {
     socket.on('left', (data) => {
       setUsers(data);
     });
-  }, [messages, socket]);
+  }, [messages, USER_NAME, socket]);
 
   return (
     <div className="chat-wrapper">
