@@ -79,12 +79,12 @@ io.on('connection', (socket) => {
       io.to(user).emit('private chat accepted', {
         user,
         name,
-        room: makeid(20),
+        room: makeid(40),
       });
       io.to(socket.id).emit('private chat accepted', {
         user,
         name,
-        room: makeid(20),
+        room: makeid(40),
       });
       console.log({ user, name });
     });
